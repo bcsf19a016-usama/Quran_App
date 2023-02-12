@@ -17,6 +17,7 @@ public class SurahContext extends AppCompatActivity {
     String translationType;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Ayat> thisSurahAyat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,11 @@ public class SurahContext extends AppCompatActivity {
         ArrayList<Ayat> ayat = db.getAyat();
         thisSurahAyat = new ArrayList<>();
         Intent i = getIntent();
-        if(i.getExtras() != null) {
+        if (i.getExtras() != null) {
             int index = Integer.parseInt(i.getStringExtra("index"));
             translationType = i.getStringExtra("type");
             index++;
-            if(index > 1)
+            if (index > 1)
                 thisSurahAyat.add(ayat.get(0));
             for (int ind = 0; ind < ayat.size(); ind++) {
                 String id = ayat.get(ind).getSuratId();
@@ -43,9 +44,9 @@ public class SurahContext extends AppCompatActivity {
         final RecyclerView rv = findViewById(R.id.recylerViewStudent);
         rv.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(SurahContext.this,
-                LinearLayoutManager.VERTICAL,false);
+                LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(layoutManager);
-        adapter = new recyclerAdapter(thisSurahAyat,translationType) ;
+        adapter = new recyclerAdapter(thisSurahAyat, translationType);
         rv.setAdapter(adapter);
     }
 
@@ -70,3 +71,4 @@ public class SurahContext extends AppCompatActivity {
 //        return super.onCreateOptionsMenu(menu);
 //    }
 
+}
