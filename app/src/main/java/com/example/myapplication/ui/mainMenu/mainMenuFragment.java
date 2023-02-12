@@ -17,7 +17,7 @@ private FragmentMainMenuBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentMainMenuBinding.inflate(inflater, container, false);
+
         final View rootView =
                 inflater.inflate(R.layout.fragment_main_menu, container, false);
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+
+
+    </group>
+    <item android:title="Surahs">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_urdu_surah"
+
+                    android:title="Urdu Translations" />
+                <item
+                    android:id="@+id/nav_english_surah"
+
+                    android:title="English Translations" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Parahs">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_urdu_parah"
+
+                    android:title="Urdu Translations" />
+                <item
+                    android:id="@+id/nav_english_parah"
+
+                    android:title="English Translations" />
+            </group>
+        </menu>
+    </item>
+</menu>
